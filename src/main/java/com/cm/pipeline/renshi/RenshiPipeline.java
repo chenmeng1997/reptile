@@ -1,4 +1,4 @@
-package com.cm.pipeline;
+package com.cm.pipeline.renshi;
 
 import org.springframework.stereotype.Component;
 import us.codecraft.webmagic.ResultItems;
@@ -15,6 +15,12 @@ public class RenshiPipeline implements Pipeline {
     @Override
     public void process(ResultItems resultItems, Task task) {
         Object listLink = resultItems.get("listLink");
-        System.out.println("obj:"+listLink);
+        Object summaryList = resultItems.get("summaryList");
+
+        Object title = resultItems.get("title");
+        Object time = resultItems.get("time");
+            System.out.println("listLink:"+listLink);
+            System.out.println("title:"+title);
+            System.out.println("time:"+time);
     }
 }
